@@ -1,9 +1,14 @@
 import sys
 
 def main():
-    with open(sys.argv[2], "r") as input_file:
+    # Format comanda: python encrypt.py cheiecriptare input.txt output
+    # !!! input este fisier text si output este fisier binar
+    key = sys.argv[1]               # Cheia de criptare
+    input_filename = sys.argv[2]    # Fisierul de input, care contine textul initial
+    output_filename = sys.argv[3]   # Fisierul de output, in care scriem continutul textului criptat
+
+    with open(input_filename, "r") as input_file:
         sir = input_file.read()
-    key = sys.argv[1]
     
     lsir = len(sir)
     lkey = len(key)
@@ -15,8 +20,8 @@ def main():
 
     newFileBytes = bytearray(output_list)
 
-    with open(sys.argv[3], "wb") as output:
-        output.write(newFileBytes)
+    with open(output_filename, "wb") as output_file:
+        output_file.write(newFileBytes)
 
 if __name__ == '__main__':
     main()
