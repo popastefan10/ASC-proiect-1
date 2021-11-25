@@ -1,12 +1,9 @@
-# 1. Luam parametrii din linia de comanda
-# 2. Citirea => str
-#
-#
+import sys
 
 def main():
-    input_file = open("input.txt", "r")
-    sir = input_file.read()
-    key = "123"
+    with open(sys.argv[2], "r") as input_file:
+        sir = input_file.read()
+    key = sys.argv[1]
     
     lsir = len(sir)
     lkey = len(key)
@@ -18,9 +15,8 @@ def main():
 
     newFileBytes = bytearray(output_list)
 
-    newFile = open("output.bin", "wb")
-
-    newFile.write(newFileBytes)
+    with open(sys.argv[3], "wb") as output:
+        output.write(newFileBytes)
 
 if __name__ == '__main__':
     main()
