@@ -9,7 +9,7 @@ def main():
 
     with open(input_filename, "r") as input_file:
         sir = input_file.read()
-    
+
     lsir = len(sir)
     lkey = len(key)
     output_list = list()
