@@ -34,6 +34,13 @@
   
 ## Continuare (prima parte)
 
+Numele echipei noastre: _numeGeneric_
+
+Numele echipei adverse: _Magnus Prafsen_
+
+Cheia echipei adverse: _MagnusBlunder_
+
+
 1. Ne folosim de urmatoarea proprietate a operatiei _xor_, pe care o vom nota in continuare cu ⊕:
 
    ```a ⊕ x ⊕ x = a```
@@ -48,6 +55,8 @@
    
    ```cheie_criptare = input ⊕ output_criptat```
    
-   Astfel, daca aplicam operatia ⊕ caracter cu caracter pe fisierele _input.txt_ si _output_ ale adversarilor vom obtine un fisier text in care avem cheia lor de criptare scrisa de foarte multe ori.
+   Astfel, daca aplicam operatia ⊕ caracter cu caracter pe fisierele _input.txt_ si _output_ ale adversarilor vom obtine un sir de caractere in care avem cheia lor de criptare scrisa de foarte multe ori.
 
-2. In acest moment cheia de criptare se poate vedea cu ochiul liber, dar se poate obtine si folosind algoritmul KMP pe fisierul in care se gaseste cheia de criptare de multe ori. Fisierul acesta este periodic, deci daca gasim perioada minima a fisierului rezultat putem obtine si cheia de criptare. Fie _L_ lungimea fisierului cu cheia de criptare; dupa ce calculam functia _prefix_ cu ajutorul KMP, perioada minima va fi ```T = L - prefix[L-1]``` (presupunem ca avem indexare de la 0). In acest moment mai ramane sa aflam lungimea cheii de criptare, stiind ca este un multiplu al lui _T_ cuprins intre 10 si 15.
+2. In acest moment cheia de criptare se poate vedea cu ochiul liber, dar se poate obtine si folosind algoritmul KMP pe sirul in care se gaseste cheia de criptare de multe ori. 
+   Sirul acesta este periodic, deci daca gasim perioada minima a acestuia putem obtine si cheia de criptare. Fie _L_ lungimea sirului cu cheia de criptare; dupa ce calculam functia _prefix_ cu ajutorul KMP, perioada minima va fi ```T = L - prefix[L-1]``` (presupunem ca avem indexare de la 0). 
+   In acest moment mai ramane sa aflam lungimea cheii de criptare, stiind ca este un multiplu al lui _T_ cuprins intre 10 si 15.
