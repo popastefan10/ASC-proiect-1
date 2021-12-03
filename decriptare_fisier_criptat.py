@@ -47,11 +47,5 @@ def main():
     key = ''.join(output_list[:pmin])
     print(key)
 
-    # newFileBytes = bytearray(output_list)
-
-
-    # with open("key.txt", "wb") as output_file:
-    #     output_file.write(newFileBytes)
-
 if __name__ == '__main__':
     main()
