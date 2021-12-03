@@ -20,10 +20,10 @@ def main():
     # Format comanda: python encrypt.py cheiecriptare input.txt output
     # !!! input este fisier text si output este fisier binar
 
-    with open("input.txt", "r") as input_file:
+    with open("fisier_original.txt", "r") as input_file:
         sir = input_file.read()
 
-    with open("output", "r") as output_file:
+    with open("fisier_criptat", "r") as output_file:
         sir_criptat = output_file.read()
 
     lsir = len(sir)
@@ -47,11 +47,11 @@ def main():
     key = ''.join(output_list[:pmin])
     print(key)
 
-    newFileBytes = bytearray(output_list)
+    # newFileBytes = bytearray(output_list)
 
 
-    with open("key.txt", "wb") as output_file:
-        output_file.write(newFileBytes)
+    # with open("key.txt", "wb") as output_file:
+    #     output_file.write(newFileBytes)
 
 if __name__ == '__main__':
     main()
