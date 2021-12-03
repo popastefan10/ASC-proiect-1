@@ -43,8 +43,14 @@ def main():
         caracter_sir = ord( sir[i] )
         output_list.append(chr(caracter_criptat ^ caracter_sir))
 
-    pmin = perioada_minima(output_list[:46])
-    key = ''.join(output_list[:pmin])
+    lim = 46
+    pmin = perioada_minima(output_list[:lim])
+
+    # Putem avea o situatie in care cheia este periodica asa ca pmin va fi perioada cheii
+    lkey = pmin
+    while lkey < 10:
+        lkey += pmin
+    key = ''.join(output_list[:lkey])
     print(key)
 
 if __name__ == '__main__':
