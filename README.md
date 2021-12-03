@@ -40,6 +40,7 @@ Numele echipei adverse: _Magnus Prafsen_
 
 Cheia echipei adverse: _MagnusBlunder_
 
+### Metoda de rezolvare
 
 1. Ne folosim de urmatoarea proprietate a operatiei _xor_, pe care o vom nota in continuare cu ⊕:
 
