@@ -1,0 +1,1 @@
+print(bin(ord('M') ^ 0xef))
